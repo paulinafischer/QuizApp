@@ -13,9 +13,9 @@ Product Details
 *In the first question If the three words are correct, add three points.
 *The other questions are equivalent to one point.
 
-A question with three edit views to enter the answers
-Three multiple-choice questions
-Three selection questions.
+*A question with three edit views to enter the answers
+*Three multiple-choice questions
+*Three selection questions.
 
 Values
 *dimensions
