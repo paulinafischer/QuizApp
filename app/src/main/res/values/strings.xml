@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="submit_label">Submit</string>
+    <string name="reset_label">Reset</string>
+    <string name="title1">Polyglot</string>
+    <string name="title2">Quiz</string>
+    <string name="name">Created and coded by: Paulina Fischer</string>
+    <string name="udacity">www.udacity.com</string>
+
+
+
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_quiz">#FAFAFA</color>
+    <color name="palette1">#9A1D33</color>
+    <color name="palette2">#146B55</color>
+    <color name="font1">#000000</color>
+    <color name="Palette2a">#419781</color>
+    <color name="Palette2b">#9ED6C8</color>
+    <color name="Palette2c">#28826B</color>
+    <color name="Palette1a">#F8B8C3</color>
+
+
+
+
+
+</resources>
