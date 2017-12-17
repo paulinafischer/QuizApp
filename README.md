@@ -24,7 +24,7 @@ Values
 *strings
 
 Java
-The code follows the required standards.
+*The code follows the required standards.
 
 Author: Paulina Fischer
 License: MIT
