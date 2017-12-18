@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             String title2 = getResources().getString(R.string.title2);
             String name = getResources().getString(R.string.name);
             String udacity = getResources().getString(R.string.udacity);
-        // Initialize the CheckBoxes
+        // Initialize the CheckBoxes-p.fischer
         box1= (CheckBox) findViewById(R.id.check_1);
         box2= (CheckBox) findViewById(R.id.check_2);
         box3= (CheckBox) findViewById(R.id.check_3);
@@ -105,11 +105,11 @@ public class MainActivity extends AppCompatActivity {
         box10= (CheckBox) findViewById(R.id.check_10);
         box11= (CheckBox) findViewById(R.id.check_11);
         box12= (CheckBox) findViewById(R.id.check_12);
-            // Initialize EditText
+            // Initialize EditText-p.fischer
             editTextAnswer1 = (EditText) findViewById(R.id.answer_1);
             editTextAnswer2 = (EditText) findViewById(R.id.answer_2);
             editTextAnswer3 = (EditText) findViewById(R.id.answer_3);
-        // Initialize the RadioGroup
+        // Initialize the RadioGroup-p.fischer
         radioGroupQuizA = (RadioGroup) findViewById(R.id.group1);
         radioGroupQuizB = (RadioGroup) findViewById(R.id.group2);
         radioGroupQuizC = (RadioGroup) findViewById(R.id.group3);
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         tx3.setTypeface(tf3);
         }
     public void setListeners() {
-        // CheckBox listeners
+        // CheckBox listeners-p.fischer
         chkCheckedListner = new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton selectedCheckBox, boolean isChecked) {
@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
        box10.setOnCheckedChangeListener(chkCheckedListner);
        box11.setOnCheckedChangeListener(chkCheckedListner);
        box12.setOnCheckedChangeListener(chkCheckedListner);
-        // RadioGroup Listeners
+        // RadioGroup Listeners-p.fischer
         radioCheckChangeListener = new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
         if (isChoiceRadio5 && !isChoiceRadio6) {
             score += 1;
         }
-        /**test if code*/
+        //test if code
         if (box1.isChecked() && box4.isChecked() && !box2.isChecked() && !box3.isChecked()) {
             score++;
         } else {
@@ -303,7 +303,7 @@ public class MainActivity extends AppCompatActivity {
         isChoiceRadio4=false;
         isChoiceRadio5=false;
         isChoiceRadio6=false;
-        // Reset all CheckBoxes
+        // Reset all CheckBoxes-p.fischer
         box1.setChecked(false);
         box2.setChecked(false);
         box3.setChecked(false);
