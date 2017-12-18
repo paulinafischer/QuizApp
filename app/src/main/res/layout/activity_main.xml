@@ -295,7 +295,7 @@
                     android:id="@+id/text_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="B)Look at the image and check the boxes with the correct answer in French."
+                    android:text="B) Look at the image and check the boxes with the correct answer in French."
                     android:textColor="@color/font1"
                     android:textSize="@dimen/text_p"
                     android:gravity="center_horizontal"
