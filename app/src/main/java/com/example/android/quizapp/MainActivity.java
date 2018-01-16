@@ -2,11 +2,13 @@ package com.example.android.quizapp;
 
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -21,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextAnswer1;
     private EditText editTextAnswer2;
     private EditText editTextAnswer3;
+    private EditText editTextAnswer1_Q8;
+    private EditText editTextAnswer2_Q8;
+    private EditText editTextAnswer3_Q8;
     private CheckBox box1;
     private CheckBox box2;
     private CheckBox box3;
@@ -60,7 +65,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
-            Resources res = getResources();
+        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.music);
+        mediaPlayer.start();
+        mediaPlayer.setLooping(true);
+
+
+        Resources res = getResources();
             float height = res.getDimension(R.dimen.layout_height);
             float width = res.getDimension(R.dimen.layout_width);
             float radius = res.getDimension(R.dimen.layout_radius);
@@ -90,8 +100,37 @@ public class MainActivity extends AppCompatActivity {
             String reset = getResources().getString(R.string.reset_label);
             String title1 = getResources().getString(R.string.title1);
             String title2 = getResources().getString(R.string.title2);
+            String title3 = getResources().getString(R.string.title3);
+            String let = getResources().getString(R.string.lets);
+            String instruction = getResources().getString(R.string.instruction);
+            String instruction2 = getResources().getString(R.string.instruction2);
+            String q1 = getResources().getString(R.string.questionOne);
+            String q2 = getResources().getString(R.string.questionTwo);
+            String q3 = getResources().getString(R.string.questionThree);
+            String q4 = getResources().getString(R.string.questionFour);
+            String q5 = getResources().getString(R.string.questionFive);
+            String q6 = getResources().getString(R.string.questionSix);
+            String q7 = getResources().getString(R.string.questionSeven);
+            String Spanish1 = getResources().getString(R.string.Spanish1);
+            String Spanish2 = getResources().getString(R.string.Spanish2);
+            String Spanish3 = getResources().getString(R.string.Spanish3);
+            String Spanish4 = getResources().getString(R.string.Spanish4);
+            String French1 = getResources().getString(R.string.French1);
+            String French2 = getResources().getString(R.string.French2);
+            String French3 = getResources().getString(R.string.French3);
+            String French4 = getResources().getString(R.string.French1);
+            String Italian1 = getResources().getString(R.string.Italian1);
+            String Italian2 = getResources().getString(R.string.Italian2);
+            String Italian3 = getResources().getString(R.string.Italian3);
+            String Italian4 = getResources().getString(R.string.Italian1);
+            String Choose1 = getResources().getString(R.string.choose1);
+            String Choose2 = getResources().getString(R.string.choose2);
+            String Choose3 = getResources().getString(R.string.choose3);
+            String Choose4 = getResources().getString(R.string.choose4);
+            String Choose5 = getResources().getString(R.string.choose5);
+            String Choose6 = getResources().getString(R.string.choose1);
             String name = getResources().getString(R.string.name);
-            String udacity = getResources().getString(R.string.udacity);
+            String web = getResources().getString(R.string.web);
         // Initialize the CheckBoxes-p.fischer
         box1= (CheckBox) findViewById(R.id.check_1);
         box2= (CheckBox) findViewById(R.id.check_2);
@@ -109,6 +148,11 @@ public class MainActivity extends AppCompatActivity {
             editTextAnswer1 = (EditText) findViewById(R.id.answer_1);
             editTextAnswer2 = (EditText) findViewById(R.id.answer_2);
             editTextAnswer3 = (EditText) findViewById(R.id.answer_3);
+            editTextAnswer1_Q8 = (EditText) findViewById(R.id.answer_1_Q8);
+            editTextAnswer2_Q8 = (EditText) findViewById(R.id.answer_2_Q8);
+            editTextAnswer3_Q8 = (EditText) findViewById(R.id.answer_3_Q8);
+
+
         // Initialize the RadioGroup-p.fischer
         radioGroupQuizA = (RadioGroup) findViewById(R.id.group1);
         radioGroupQuizB = (RadioGroup) findViewById(R.id.group2);
@@ -249,6 +293,7 @@ public class MainActivity extends AppCompatActivity {
         radioGroupQuizC.setOnCheckedChangeListener(radioCheckChangeListener);
     }
     public void addOne (View view) {
+        score=0;
         if (isChoiceRadio2 && !isChoiceRadio1) {
             score += 1;
         }
@@ -286,14 +331,29 @@ public class MainActivity extends AppCompatActivity {
             String answerThree = editTextAnswer3.getText().toString();
             if (answerThree.equals("Buch")) {
                 score++;
-            }
-            display("SCORE: " + score);
+        }
+            String answerEightOne = editTextAnswer1_Q8.getText().toString();
+        if (answerEightOne.equals("bröd")) {
+            score++;
+        }
+        String answerEightTwo = editTextAnswer2_Q8.getText().toString();
+        if (answerEightTwo.equals("klocka")) {
+            score++;
+        }
+        String answerEightThree = editTextAnswer3_Q8.getText().toString();
+        if (answerEightThree.equals("sova")) {
+            score++;
+        }
+        display("SCORE: " + score);
         }
     public void reset(View view) {
         score=0;
         editTextAnswer1.setText("");
         editTextAnswer2.setText("");
         editTextAnswer3.setText("");
+        editTextAnswer1_Q8.setText("");
+        editTextAnswer2_Q8.setText("");
+        editTextAnswer3_Q8.setText("");
         radioGroupQuizA.clearCheck();
         radioGroupQuizB.clearCheck();
         radioGroupQuizC.clearCheck();

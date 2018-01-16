@@ -6,7 +6,8 @@
     <string name="title2">Quiz</string>
     <string name="title3">Test your language power!</string>
     <string name="lets">Let\'s start</string>
-    <string name="instruction">The highest score is 9 points</string>
+    <string name="instruction">The highest score is 12 points</string>
+    <string name="instruction2">1 star = 1 point</string>
     <string name="questionOne">1. Write the name of the objects in German.</string>
     <string name="questionTwo">2. Look at the picture and check the boxes with the correct answer in Spanish.</string>
     <string name="questionThree">3. Look at the picture and check the boxes with the correct answer in French.</string>
@@ -14,6 +15,7 @@
     <string name="questionFive">5. Choose the right answer.</string>
     <string name="questionSix">6. Choose the right answer.</string>
     <string name="questionSeven">7. Choose the right answer.</string>
+    <string name="questionEight">8. Write the name of the objects in Swedish.</string>
     <string name="Spanish1">Arbol</string>
     <string name="Spanish2">Ballena</string>
     <string name="Spanish3">Bote</string>
@@ -32,10 +34,17 @@
     <string name="choose4">Borboleta</string>
     <string name="choose5">ロケット</string>
     <string name="choose6">靴</string>
-    <string name="name">Created and coded by: Paulina Fischer</string>
-    <string name="udacity">www.udacity.com</string>
-
-
-
-
+    <string name="btnStart">Start</string>
+    <string name="learnger">Learn German</string>
+    <string name="learnspa">Learn Spanish</string>
+    <string name="learnita">Learn Italian</string>
+    <string name="learnfre">Learn French</string>
+    <string name="learnport">Learn Portuguese</string>
+    <string name="learnor">Learn Norwegian</string>
+    <string name="learnswe">Learn Swedish</string>
+    <string name="learnlat">Learn Latin</string>
+    <string name="learnjap">Learn Japanese</string>
+    <string name="returnToHome">Return</string>
+    <string name="name">Copyright © Paulina Fischer. All rights reserved.</string>
+    <string name="web">paulinafischer.github.io</string>
 </resources>

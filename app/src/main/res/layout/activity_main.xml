@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/couple"
-                android:padding="@dimen/padding"
+                android:padding="@dimen/quiz_margin"
                 />
             <TextView
                 android:layout_marginTop="@dimen/cover_text_margin_top"
@@ -57,37 +57,58 @@
                 android:id="@+id/below_h1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Test your language power!"
+                android:text="@string/title3"
                 android:textSize="@dimen/text_h3"
                 android:layout_gravity="center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/Palette2b"
                />
         </RelativeLayout>
-        <TextView
-        android:id="@+id/lets"
-        android:layout_below="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Let's start!"
-        android:textSize="@dimen/text_h2"
-        android:textColor="@color/font1"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"/>
-        <TextView
-            android:id="@+id/instructions"
-            android:layout_below="@+id/lets"
+        <LinearLayout
+            android:id="@+id/instructionsQuiz"
+            android:layout_below="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="The highest score is 9 points"
-            android:textSize="@dimen/text_p"
-            android:textColor="@color/Palette2c"
-            android:gravity="center_horizontal"
-            android:textAlignment="center"
-            android:layout_marginBottom="@dimen/margin"/>
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/quiz_box_padding"
+            android:background="@drawable/border_instructions">
+            <TextView
+                android:id="@+id/lets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lets"
+                android:textSize="@dimen/text_h2"
+                android:textColor="@color/Palette3"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:paddingBottom="@dimen/padding"
+                />
+            <TextView
+                android:id="@+id/instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/instruction"
+                android:textSize="@dimen/text_p"
+                android:textColor="@color/Palette3"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:paddingBottom="@dimen/padding"
+                />
+            <TextView
+                android:id="@+id/instructions2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/instruction2"
+                android:textSize="@dimen/text_p"
+                android:textColor="@color/Palette3"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:paddingBottom="@dimen/padding"/>
+        </LinearLayout>
         <RelativeLayout
             android:id="@+id/content"
-            android:layout_below="@+id/instructions"
+            android:layout_below="@+id/instructionsQuiz"
             android:layout_margin="@dimen/margin"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -102,14 +123,38 @@
                 android:background="@drawable/border"
                 android:padding="@dimen/quiz_box_padding"
                 >
+                <ImageView
+                    android:id="@+id/starQ1_2"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@id/starQ1_1"
+                    />
+                <ImageView
+                    android:id="@+id/starQ1_1"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    />
+                <ImageView
+                    android:id="@+id/starQ1_3"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@id/starQ1_2"
+                    />
                 <TextView
+                    android:layout_below="@id/starQ1_1"
                     android:id="@+id/text_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="A) Write the name of the objects in German. "
+                    android:text="@string/questionOne"
                     android:textColor="@color/font1"
-                    android:textSize="@dimen/text_p" />
+                    android:textSize="@dimen/text_p"
+                    android:paddingVertical="@dimen/padding"
+                    />
                 <LinearLayout
                     android:id="@+id/ll_a"
                     android:layout_width="match_parent"
@@ -196,14 +241,24 @@
                 android:background="@drawable/border"
                 android:layout_marginVertical="@dimen/margin_vertical"
                 android:padding="@dimen/quiz_box_padding">
+                <ImageView
+                    android:id="@+id/starQ2_1"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+
+                    />
             <TextView
                 android:id="@+id/text_2"
+                android:layout_below="@id/starQ2_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="A) Look at the picture and check the boxes with the correct answer in Spanish.  "
+                android:text="@string/questionTwo"
                 android:gravity="center_horizontal"
                 android:textColor="@color/font1"
-                android:textSize="@dimen/text_p" />
+                android:textSize="@dimen/text_p"
+                android:padding="@dimen/padding"/>
             <ImageView
                 android:id="@+id/imageB"
                 android:layout_below="@+id/text_2"
@@ -231,7 +286,7 @@
                     android:layout_weight="1"
                     android:textAlignment="center"
                     android:gravity="center_horizontal"
-                    android:text="Arbol"
+                    android:text="@string/Spanish1"
                     android:textColor="@color/font1"
                     android:textSize="@dimen/text_p" />
                 <CheckBox
@@ -242,7 +297,7 @@
                     android:layout_weight="1"
                     android:textAlignment="center"
                     android:gravity="center_horizontal"
-                    android:text="Ballena"
+                    android:text="@string/Spanish2"
                     android:textColor="@color/font1"
                     android:textSize="@dimen/text_p"
                     />
@@ -266,7 +321,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Bote"
+                        android:text="@string/Spanish3"
                         android:textSize="@dimen/text_p"
                         />
                     <CheckBox
@@ -277,7 +332,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Ventana"
+                        android:text="@string/Spanish4"
                         android:textSize="@dimen/text_p"
                         />
                 </LinearLayout>
@@ -291,14 +346,23 @@
                 android:layout_marginVertical="@dimen/margin_vertical"
                 android:padding="@dimen/quiz_box_padding"
                 >
+                <ImageView
+                    android:id="@+id/starQ3_1"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    />
                 <TextView
                     android:id="@+id/text_3"
+                    android:layout_below="@id/starQ3_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="B) Look at the image and check the boxes with the correct answer in French."
+                    android:text="@string/questionThree"
                     android:textColor="@color/font1"
                     android:textSize="@dimen/text_p"
                     android:gravity="center_horizontal"
+                    android:padding="@dimen/padding"
                    />
                 <ImageView
                     android:id="@+id/imageC"
@@ -326,7 +390,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Coeur"
+                        android:text="@string/French1"
                         android:textSize="@dimen/text_p"/>
                     <CheckBox
                         android:id="@+id/check_6"
@@ -336,7 +400,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Cuillère"
+                        android:text="@string/French2"
                         android:textSize="@dimen/text_p"
                        />
                 </LinearLayout>
@@ -358,7 +422,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text= "Nez"
+                        android:text= "@string/French3"
                         android:textSize="@dimen/text_p"
                         />
                     <CheckBox
@@ -369,7 +433,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Bouche"
+                        android:text="@string/French4"
                         android:textSize="@dimen/text_p"
                         />
                 </LinearLayout>
@@ -382,14 +446,23 @@
                 android:background="@drawable/border"
                 android:layout_marginVertical="@dimen/margin_vertical"
                 android:padding="@dimen/quiz_box_padding">
+                <ImageView
+                    android:id="@+id/starQ4_1"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    />
                 <TextView
                     android:id="@+id/text_4"
+                    android:layout_below="@id/starQ4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="C) Look at the image and check the boxes with the correct answer in Italian."
+                    android:text="@string/questionFour"
                     android:textColor="@color/font1"
                     android:textSize="@dimen/text_p"
                     android:gravity="center_horizontal"
+                    android:paddingVertical="@dimen/padding"
                     />
                 <ImageView
                     android:id="@+id/imageD"
@@ -417,7 +490,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Motore"
+                        android:text="@string/Italian1"
                         android:textSize="@dimen/text_p"/>
                     <CheckBox
                         android:id="@+id/check_10"
@@ -427,7 +500,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Tazza"
+                        android:text="@string/Italian2"
                         android:textSize="@dimen/text_p"
                        />
                 </LinearLayout>
@@ -449,7 +522,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Pedale"
+                        android:text="@string/Italian3"
                         android:textSize="@dimen/text_p"
                         />
                     <CheckBox
@@ -460,7 +533,7 @@
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:gravity="center_horizontal"
-                        android:text="Volante"
+                        android:text="@string/Italian4"
                         android:textSize="@dimen/text_p"
                         />
                 </LinearLayout>
@@ -473,15 +546,24 @@
                 android:padding="@dimen/quiz_box_padding"
                 android:background="@drawable/border"
                 android:layout_marginVertical="@dimen/margin_vertical">
+                <ImageView
+                    android:id="@+id/starQ5_1"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    />
             <TextView
                 android:id="@+id/text_5"
+                android:layout_below="@id/starQ5_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="C. Choose the right answer."
+                android:text="@string/questionFive"
                 android:gravity="center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/font1"
                 android:textSize="@dimen/text_p"
+                android:paddingVertical="@dimen/padding"
                 />
             <ImageView
                 android:id="@+id/imageE"
@@ -512,7 +594,7 @@
                     android:id="@+id/radio_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fugl"
+                    android:text="@string/choose1"
                     android:textSize="@dimen/text_p"
                     android:textAlignment="center"
                     android:paddingRight="20dp"
@@ -521,7 +603,7 @@
                     android:id="@+id/radio_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fiolin"
+                    android:text="@string/choose2"
                     android:textSize="@dimen/text_p"
                     android:textAlignment="center"
                     />
@@ -536,15 +618,24 @@
                 android:padding="@dimen/quiz_box_padding"
                 android:background="@drawable/border"
                 android:layout_marginVertical="@dimen/margin_vertical">
+                <ImageView
+                    android:id="@+id/starQ6_1"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    />
             <TextView
                 android:id="@+id/text_6"
+                android:layout_below="@id/starQ6_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="C. Choose the right answer"
+                android:text="@string/questionSix"
                 android:textAlignment="center"
                 android:gravity="center_horizontal"
                 android:textColor="@color/font1"
-                android:textSize="@dimen/text_p" />
+                android:textSize="@dimen/text_p"
+                android:paddingVertical="@dimen/padding"/>
             <ImageView
                 android:id="@+id/imageF"
                 android:layout_below="@+id/text_6"
@@ -574,7 +665,7 @@
                     android:id="@+id/radio_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Abelha"
+                    android:text="@string/choose3"
                     android:textSize="@dimen/text_p"
                     android:paddingRight="20dp"
                     />
@@ -582,7 +673,7 @@
                     android:id="@+id/radio_d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Borboleta"
+                    android:text="@string/choose4"
                     android:textSize="@dimen/text_p"
                    ></RadioButton>
             </RadioGroup>
@@ -596,15 +687,24 @@
                 android:padding="@dimen/quiz_box_padding"
                 android:background="@drawable/border"
                 android:layout_marginVertical="@dimen/margin_vertical">
+                <ImageView
+                    android:id="@+id/starQ7_1"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    />
             <TextView
                 android:id="@+id/text_7"
+                android:layout_below="@id/starQ7_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/font1"
                 android:textSize="@dimen/text_p"
-                android:text="C. Choose the right answer"
+                android:text="@string/questionSeven"
                 android:textAlignment="center"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:paddingVertical="@dimen/padding"/>
             <ImageView
                 android:id="@+id/imageG"
                 android:layout_below="@+id/text_7"
@@ -634,7 +734,7 @@
                     android:id="@+id/radio_e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ロケット"
+                    android:text="@string/choose5"
                     android:textSize="@dimen/text_p"
                     android:textAlignment="center"
                     android:paddingRight="20dp"
@@ -643,13 +743,132 @@
                     android:id="@+id/radio_f"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="靴"
+                    android:text="@string/choose6"
                     android:textSize="@dimen/text_p"
                     android:textAlignment="center"
                     />
             </RadioGroup>
                 </LinearLayout>
         </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/questionEight"
+                android:layout_below="@+id/r3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/border"
+                android:padding="@dimen/quiz_box_padding"
+                >
+                <ImageView
+                    android:id="@+id/starQ8_2"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@id/starQ8_1"
+                    />
+                <ImageView
+                    android:id="@+id/starQ8_1"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    />
+                <ImageView
+                    android:id="@+id/starQ8_3"
+                    android:src="@drawable/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@id/starQ8_2"
+                    />
+                <TextView
+                    android:layout_below="@id/starQ8_1"
+                    android:id="@+id/text_Q8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/questionEight"
+                    android:textColor="@color/font1"
+                    android:textSize="@dimen/text_p"
+                    android:paddingVertical="@dimen/padding"
+                    />
+                <LinearLayout
+                    android:id="@+id/ll_Q8_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_Q8"
+                    android:layout_marginHorizontal="@dimen/margin"
+                    android:layout_marginVertical="@dimen/margin_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:paddingHorizontal="@dimen/padding_horizontal"
+                        android:src="@drawable/bread" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:paddingHorizontal="@dimen/padding_horizontal"
+                        android:src="@drawable/clock" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:paddingHorizontal="@dimen/padding_horizontal"
+                        android:src="@drawable/sleeping" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_a_Q8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_Q8_a"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/padding"
+                    android:textAlignment="center"
+                    android:paddingBottom="@dimen/quiz_box_padding">
+                    <EditText
+                        android:id="@+id/answer_1_Q8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/padding"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:gravity="center_horizontal"
+                        android:hint="Write here"
+                        android:inputType="textCapWords"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_p" />
+                    <EditText
+                        android:id="@+id/answer_2_Q8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/padding"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:gravity="center_horizontal"
+                        android:hint="Write here"
+                        android:inputType="textCapWords"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_p" />
+                    <EditText
+                        android:id="@+id/answer_3_Q8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/padding"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:gravity="center_horizontal"
+                        android:hint="Write here"
+                        android:inputType="textCapWords"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_p" />
+                </LinearLayout>
+            </RelativeLayout>
         </RelativeLayout>
            <Button
                android:layout_below="@+id/content"
@@ -713,9 +932,10 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/udacity"
+            android:text="@string/web"
             android:gravity="center_horizontal"
-            android:textAlignment="center">
+            android:textAlignment="center"
+            android:paddingBottom="@dimen/padding">
         </TextView>
 </RelativeLayout>
 </ScrollView>

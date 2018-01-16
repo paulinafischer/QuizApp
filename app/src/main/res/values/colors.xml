@@ -11,9 +11,11 @@
     <color name="Palette2b">#9ED6C8</color>
     <color name="Palette2c">#28826B</color>
     <color name="Palette1a">#F8B8C3</color>
-
-
-
-
+    <color name="Palette3">#A4501F</color>
+    <color name="Palette3a">#C8713D</color>
+    <color name="Palette1b">#BB3950</color>
+    <color name="Palette41">#3C8D1A</color>
+    <color name="Palette42">#58AC35</color>
+    <color name="Palette1c">#DA5E74</color>
 
 </resources>
