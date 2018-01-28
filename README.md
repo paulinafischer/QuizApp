@@ -17,6 +17,7 @@ Styles
 Strings
 
 Author: Paulina Fischer
+
 License: MIT
 
 
