@@ -3,15 +3,15 @@ Android Basics Udacity Project.
 
 **Version 1.0.0**
 
-##Installation
+## Installation
 
 1.Android Studio
 2.Java
 
-##Product Details
+## Product Details
 Test your knowledge in several languages.
 
-##Values
+## Values
 Dimensions
 Colors
 Styles
