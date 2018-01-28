@@ -20,8 +20,10 @@ Styles
 Strings
 
 
-Author: Paulina Fischer
+## Contributor
+Paulina Fischer
 
-License: MIT
+## License
+MIT
 
 
