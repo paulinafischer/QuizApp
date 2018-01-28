@@ -1,4 +1,4 @@
-# QuizAppUdacity
+# QuizApp
 Android Basics Udacity Project.
 
 **Version 1.0.0**
