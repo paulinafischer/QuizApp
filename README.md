@@ -5,8 +5,8 @@ Android Basics Udacity Project.
 
 ## Installation
 
-1.Android Studio
-2.Java
+Android Studio
+Java
 
 ## Product Details
 Test your knowledge in several languages.
