@@ -12,9 +12,13 @@ Test your knowledge in several languages.
 
 ## Values
 Dimensions
+
 Colors
+
 Styles
+
 Strings
+
 
 Author: Paulina Fischer
 
