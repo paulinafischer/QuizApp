@@ -4,7 +4,6 @@ Android Basics Udacity Project.
 **Version 1.0.0**
 
 ## Installation
-
 Android Studio
 Java
 
